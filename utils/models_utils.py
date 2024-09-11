@@ -8,7 +8,7 @@
 ########################################################################################################################
 
 from models.ViTs.DeepViT import *
-from models.ViTs.PararellViT import *
+from models.ViTs.ParallelViT import *
 from models.ViTs.ViT import *
 from models.ViTs.XCiT import *
 from models.ViTs.CrossViT import *

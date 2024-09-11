@@ -101,7 +101,7 @@ class Transformer(nn.Module):
         return x
 
 
-class PararellViT(nn.Module):
+class ParallelViT(nn.Module):
     def __init__(self, *, image_size, patch_size, num_classes, dim, depth, heads, mlp_dim, pool='cls',
                  num_parallel_branches=2, channels=3, dim_head=64, dropout=0., emb_dropout=0.):
         super().__init__()
@@ -150,9 +150,9 @@ class PararellViT(nn.Module):
         return self.mlp_head(x)
 
 
-def pararell_vit_Ti(args):
+def parallel_vit_Ti(args):
     width = 192
-    model = PararellViT(image_size=args['img_size'],
+    model = ParallelViT(image_size=args['img_size'],
                         patch_size=16,
                         num_classes=1,
                         dim=width,
@@ -166,9 +166,9 @@ def pararell_vit_Ti(args):
     return model
 
 
-def pararell_vit_S(args):
+def parallel_vit_S(args):
     width = 384
-    model = PararellViT(image_size=args['img_size'],
+    model = ParallelViT(image_size=args['img_size'],
                         patch_size=16,
                         num_classes=1,
                         dim=width,
@@ -182,9 +182,9 @@ def pararell_vit_S(args):
     return model
 
 
-def pararell_vit_B(args):
+def parallel_vit_B(args):
     width = 768
-    model = PararellViT(image_size=args['img_size'],
+    model = ParallelViT(image_size=args['img_size'],
                         patch_size=16,
                         num_classes=1,
                         dim=width,
@@ -198,9 +198,9 @@ def pararell_vit_B(args):
     return model
 
 
-def pararell_vit_L(args):
+def parallel_vit_L(args):
     width = 1024
-    model = PararellViT(image_size=args['img_size'],
+    model = ParallelViT(image_size=args['img_size'],
                         patch_size=16,
                         num_classes=1,
                         dim=width,
@@ -215,7 +215,7 @@ def pararell_vit_L(args):
 
 
 if __name__ == '__main__':
-    models = ['pararell_vit_Ti']
+    models = ['parallel_vit_Ti']
     args = {'img_size': 384, 'channels': 3}
     for model_name in models:
         x = torch.randn(1, 3, 384, 384)

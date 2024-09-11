@@ -1,47 +1,34 @@
 # Vision Transformers for Weakly-Supervised enumeration of microorganisms
 
-This repo allows to replicate experiments of the comparative study of different architecture approaches for the task of 
-weakly supervised enumeration. 
+This repo allows to replicate experiments of the comparative study of different architecture approaches for the task of
+weakly supervised enumeration.
 
 ## Description
 
-This repository 
+This repository is prepared for training and testing different architectures like normal CNNs, REsNets, and Vision
+Transformer approaches like the CrossViT, DeepViT, Parallel, XCiT and the vanilla ViT. The architectures are created for
+the task of regression, which means that the output is a single number, designed so to they are able to count instances
+instead of classifying.
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
-* something
-* something
+The project runs on pytorch 3.10.
 
 ### Executing scripts
-Here i Show some example scripts executions. All arguments are configurable in the utils/config.py script, but can also be defined in the execution. 
+
+All arguments are configurable in the utils/config.py script, but can also be defined in the execution.
 
 * Training the model
   ```
-  python train.py --dataset cell_counting_yellow --pretrain y --img_size 384 --model TC_384_16_gap --epochs 500 --batch_size 16 --lr 0.00001
+  python train.py --dataset yellow_cells --pretrain y --img_size 384 --model vit_base --epochs 100 --batch_size 32 --lr 0.0001
   ```
-* Test architectures
+* Test architectures (WIP*)
   ```
-  python test.py --dataset cell_counting_yellow --img_size 384 --batch_size 16
+  python test.py --dataset yellow_cells --img_size 384 --batch_size 16
   ```
-* Generate predictions in images
-  ```
-  python test_images.py --dataset cell_counting_yellow --img_size 384 --batch_size 16
-  ```
-
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+  *Recommended using the class "TestAfterTrain" to create a tester after loading correctly the weights.
 
 ## Authors
 
@@ -50,16 +37,8 @@ Contributors names and contact info
 ex. Javier Ureña Santiago  
 ex. javier.urena@uibk.ac.at
 
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release. Created utils.py, model.py and dataloader.py
-
-## License
-
-
-
 ## Acknowledgments
+
+This project is part of the research and development project DesDet in collaboration with the department of Analytical
+Chemistry and Radiochemistry, Hollu Systemhygiene GmbH and Planlicht GmbH \& Co KG. This project is funded by
+Standortagentur Tirol.
