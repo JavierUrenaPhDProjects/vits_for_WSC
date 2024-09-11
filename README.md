@@ -28,6 +28,7 @@ There are four datasets used in this study:
   of the dataset generation tool developed for it:
   * https://github.com/JavierUrenaPhDProjects/artificial_fluorescent_dataset
 
+Guidelines for its correct use can be followed in the aforementioned repository.
 
 ## Getting Started
 
