@@ -13,9 +13,22 @@ instead of classifying.
 ## Datasets
 
 There are four datasets used in this study:
-* Fluorescent Neuronal Cells: Collection of mice neurons under fluroescence. 
-  * https://amsacta.unibo.it/id/eprint/6706/
-* 
+
+* Fluorescent Neuronal Cells: Collection of mice neurons under fluroescence.
+    * https://amsacta.unibo.it/id/eprint/6706/
+* VGG cells: Collection of blue fluorescent cells.
+    * https://www.robots.ox.ac.uk/~vgg/research/counting/index_org.html
+* U2OS and HL-60 cancer cells: Collection of two cancer cell lines for counting task.
+    * https://zenodo.org/records/4428844
+
+### Special dataset created for this project:
+
+* Artificial fluorescent bacteria dataset: Artificially created dataset that replicate the fluorescence of Bacillus
+  Subtilis bacteria. The dataset used for the project is of large size, but access to it can be achieved by making use
+  of the dataset generation tool developed for it:
+  * https://github.com/JavierUrenaPhDProjects/artificial_fluorescent_dataset
+
+
 ## Getting Started
 
 ### Dependencies
@@ -35,7 +48,6 @@ All arguments are configurable in the utils/config.py script, but can also be de
   python test.py --dataset yellow_cells --img_size 384 --batch_size 16
   ```
   *Recommended using the class "TestAfterTrain" to create a tester after loading correctly the weights.
-
 
 ## Authors
 
