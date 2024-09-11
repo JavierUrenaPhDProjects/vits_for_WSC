@@ -10,6 +10,12 @@ Transformer approaches like the CrossViT, DeepViT, Parallel, XCiT and the vanill
 the task of regression, which means that the output is a single number, designed so to they are able to count instances
 instead of classifying.
 
+## Datasets
+
+There are four datasets used in this study:
+* Fluorescent Neuronal Cells: Collection of mice neurons under fluroescence. 
+  * https://amsacta.unibo.it/id/eprint/6706/
+* 
 ## Getting Started
 
 ### Dependencies
@@ -29,6 +35,7 @@ All arguments are configurable in the utils/config.py script, but can also be de
   python test.py --dataset yellow_cells --img_size 384 --batch_size 16
   ```
   *Recommended using the class "TestAfterTrain" to create a tester after loading correctly the weights.
+
 
 ## Authors
 
